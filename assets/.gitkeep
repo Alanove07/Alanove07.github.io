@@ -1,0 +1,16 @@
+# Assets directory
+This folder contains images and media files for the portfolio.
+
+## Required Images:
+- profile.jpg - Profile photo for hero section
+- about-image.jpg - About section image
+- project1.jpg - Nexa Art Portfolio project screenshot
+- project2.jpg - PC Builder Tool project screenshot  
+- project3.jpg - Digital Art Gallery project screenshot
+
+## Image Specifications:
+- Profile: 400x400px, square crop
+- Projects: 600x400px, landscape orientation
+- About: 500x400px, landscape orientation
+
+Add your actual images here and remove this file.
