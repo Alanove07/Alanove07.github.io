@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Portfolio Demo</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px;
+            line-height: 1.6;
+        }
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, #00ff88, #0099ff, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .ai-highlight {
+            background: linear-gradient(45deg, rgba(0, 255, 136, 0.2), rgba(0, 153, 255, 0.2));
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid rgba(0, 255, 136, 0.4);
+            margin: 30px 0;
+            text-align: center;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        .feature-card.ai-feature {
+            border-color: rgba(0, 255, 136, 0.4);
+            background: linear-gradient(45deg, rgba(0, 255, 136, 0.1), rgba(0, 153, 255, 0.1));
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .feature-title {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #00ff88;
+        }
+        .ai-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .launch-btn {
+            display: block;
+            width: 350px;
+            margin: 40px auto;
+            padding: 20px;
+            background: linear-gradient(45deg, #00ff88, #0099ff);
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        .launch-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.5);
+        }
+        .note {
+            background: rgba(0, 255, 136, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #00ff88;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1>🤖 AI-Powered Portfolio</h1>
+        
+        <div class="ai-highlight">
+            <strong>🧠 Experience the Future of AI-Enhanced Web Development</strong><br>
+            This portfolio showcases how I leverage artificial intelligence to create innovative solutions, 
+            from AI-assisted coding to machine learning integration and neural network implementations.
+        </div>
+
+        <div class="feature-grid">
+            <div class="feature-card ai-feature">
+                <div class="ai-icon">🤖</div>
+                <div class="feature-title">AI-Assisted Development</div>
+                <p>Utilizing GitHub Copilot, ChatGPT, and Claude for intelligent code generation, debugging, and optimization. Experience development productivity increased by 500%.</p>
+            </div>
+
+            <div class="feature-card ai-feature">
+                <div class="ai-icon">🧠</div>
+                <div class="feature-title">Machine Learning Integration</div>
+                <p>Implementing TensorFlow and PyTorch models for intelligent web applications with predictive capabilities and automated decision-making.</p>
+            </div>
+
+            <div class="feature-card ai-feature">
+                <div class="ai-icon">🎨</div>
+                <div class="feature-title">AI Art Generation</div>
+                <p>Mastery of Midjourney, Stable Diffusion, and DALL-E for creating stunning AI-generated artwork and automated design systems.</p>
+            </div>
+
+            <div class="feature-card ai-feature">
+                <div class="ai-icon">⚡</div>
+                <div class="feature-title">Workflow Automation</div>
+                <p>Smart automation systems that handle repetitive tasks, optimize processes, and create intelligent workflows using AI algorithms.</p>
+            </div>
+
+            <div class="feature-card ai-feature">
+                <div class="ai-icon">💻</div>
+                <div class="feature-title">Smart System Design</div>
+                <p>AI-powered PC configuration tools that analyze requirements and suggest optimal hardware setups with machine learning optimization.</p>
+            </div>
+
+            <div class="feature-card ai-feature">
+                <div class="ai-icon">📊</div>
+                <div class="feature-title">Data Analysis & ML</div>
+                <p>Advanced data processing and machine learning model deployment for business intelligence and predictive analytics.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-title">🎨 Liquid Morphing Cursor</div>
+                <p>AI-enhanced cursor that adapts and morphs based on user behavior patterns and interaction preferences.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-title">✨ Neural Network Visualization</div>
+                <p>Real-time visualization of AI processes with animated neural network connections showing data flow and learning patterns.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-title">🌊 AI Code Stream</div>
+                <p>Flowing AI code snippets in the background showcasing machine learning algorithms and neural network implementations.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-title">� AI Voice Assistant</div>
+                <p>Intelligent voice interaction system with natural language processing and contextual responses about AI projects.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-title">👁️ Computer Vision Simulation</div>
+                <p>Eye tracking and object recognition simulation demonstrating computer vision capabilities and AI awareness.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-title">⚡ Quantum-AI Particles</div>
+                <p>Advanced particle systems inspired by quantum computing and AI algorithms, creating mesmerizing visual effects.</p>
+            </div>
+        </div>
+
+        <a href="index-interactive.html" class="launch-btn">
+            🤖 Launch AI-Powered Portfolio
+        </a>
+
+        <div class="note">
+            <strong>� AI Capabilities Showcased:</strong><br>
+            • GitHub Copilot-assisted development for 10x faster coding<br>
+            • ChatGPT/Claude integration for intelligent content generation<br>
+            • Machine learning model implementation and deployment<br>
+            • AI art generation using multiple platforms<br>
+            • Automated workflow and process optimization<br>
+            • Computer vision and natural language processing<br>
+            • Smart system design with AI recommendations
+        </div>
+    </div>
+</body>
+</html>

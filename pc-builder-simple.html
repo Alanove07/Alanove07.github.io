@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Builder - Simple Test</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 30%, #16213e 70%, #0f0f23 100%);
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .glass-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        .navbar {
+            background: rgba(10, 10, 10, 0.95);
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo a {
+            color: #00d2ff;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #00d2ff, #0099cc);
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: linear-gradient(135deg, #0099cc, #007399);
+            transform: translateY(-2px);
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            text-align: center;
+            opacity: 0.8;
+            margin-bottom: 40px;
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <i class="fas fa-microchip"></i>
+                    Nexa Custom Forge
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container">
+        <div class="glass-section">
+            <h1 class="hero-title">
+                <i class="fas fa-cog fa-spin"></i>
+                PC Builder Test
+            </h1>
+            <p class="hero-subtitle">
+                This is a simplified test version to debug the PC Builder page
+            </p>
+            
+            <div style="text-align: center; margin: 40px 0;">
+                <button class="btn" onclick="testFunction()">
+                    <i class="fas fa-play"></i>
+                    Test Function
+                </button>
+                
+                <button class="btn" onclick="testPCBuilder()">
+                    <i class="fas fa-microchip"></i>
+                    Test PC Builder
+                </button>
+            </div>
+            
+            <div id="test-results" style="margin-top: 30px; padding: 20px; background: rgba(0, 0, 0, 0.3); border-radius: 10px;">
+                <h3>Test Results:</h3>
+                <div id="results-content">Click buttons above to run tests...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function testFunction() {
+            document.getElementById('results-content').innerHTML = '✓ Basic JavaScript function working!';
+        }
+        
+        function testPCBuilder() {
+            const resultsDiv = document.getElementById('results-content');
+            try {
+                // Check if PCBuilder class exists
+                if (typeof PCBuilder !== 'undefined') {
+                    const builder = new PCBuilder();
+                    resultsDiv.innerHTML = '✓ PC Builder class loaded and instantiated successfully!';
+                } else {
+                    resultsDiv.innerHTML = '✗ PCBuilder class not found. Script may not be loaded.';
+                }
+            } catch (error) {
+                resultsDiv.innerHTML = '✗ Error creating PCBuilder: ' + error.message;
+                console.error('PCBuilder error:', error);
+            }
+        }
+        
+        // Test on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Simple test page loaded');
+            document.getElementById('results-content').innerHTML = '✓ Page loaded successfully! DOM ready.';
+        });
+    </script>
+    
+    <!-- Load PC Builder script -->
+    <script src="pc-builder.js"></script>
+</body>
+</html>

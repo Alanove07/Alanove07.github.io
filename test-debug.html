@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Test</title>
+    <style>
+        body {
+            background: #1a1a2e;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .test-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .error {
+            background: rgba(255, 0, 0, 0.2);
+            border-color: rgba(255, 0, 0, 0.5);
+        }
+        .success {
+            background: rgba(0, 255, 0, 0.2);
+            border-color: rgba(0, 255, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1>PC Builder Debug Test</h1>
+    
+    <div class="test-box">
+        <h3>Basic HTML/CSS Test</h3>
+        <p>If you can see this styled text, basic HTML/CSS is working.</p>
+    </div>
+    
+    <div class="test-box">
+        <h3>JavaScript Test</h3>
+        <p id="js-test">JavaScript test pending...</p>
+        <button onclick="testJS()">Test JavaScript</button>
+    </div>
+    
+    <div class="test-box">
+        <h3>CSS Files Test</h3>
+        <p id="css-test">Testing CSS file loading...</p>
+    </div>
+    
+    <div class="test-box">
+        <h3>Font Awesome Test</h3>
+        <p><i class="fas fa-microchip"></i> Font Awesome Icon (should show chip icon)</p>
+    </div>
+    
+    <div class="test-box">
+        <h3>PC Builder Script Test</h3>
+        <p id="pcbuilder-test">Testing PC Builder script...</p>
+        <button onclick="testPCBuilder()">Test PC Builder</button>
+    </div>
+    
+    <div class="test-box">
+        <h3>Console Logs</h3>
+        <p>Check browser console (F12) for any error messages.</p>
+        <button onclick="console.log('Test console log')">Test Console</button>
+    </div>
+    
+    <script>
+        // Test basic JavaScript
+        function testJS() {
+            document.getElementById('js-test').innerHTML = '<span style="color: #00ff00;">✓ JavaScript is working!</span>';
+        }
+        
+        // Test PC Builder
+        function testPCBuilder() {
+            const testElement = document.getElementById('pcbuilder-test');
+            try {
+                // Try to access PCBuilder class
+                const testBuilder = new PCBuilder();
+                testElement.innerHTML = '<span style="color: #00ff00;">✓ PC Builder class loaded successfully!</span>';
+            } catch (error) {
+                testElement.innerHTML = '<span style="color: #ff0000;">✗ PC Builder error: ' + error.message + '</span>';
+                console.error('PC Builder error:', error);
+            }
+        }
+        
+        // Test CSS loading
+        window.addEventListener('load', function() {
+            const cssTest = document.getElementById('css-test');
+            cssTest.innerHTML = '<span style="color: #00ff00;">✓ Page loaded successfully!</span>';
+        });
+        
+        // Auto-run JavaScript test
+        window.addEventListener('DOMContentLoaded', function() {
+            console.log('Debug page loaded');
+            testJS();
+        });
+    </script>
+    
+    <!-- Test font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Test PC Builder script -->
+    <script src="pc-builder.js"></script>
+</body>
+</html>

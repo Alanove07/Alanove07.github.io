@@ -1,0 +1,78 @@
+# .gitignore for Portfolio Website
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node.js (if you add build tools later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Build and Distribution Files
+dist/
+build/
+*.min.js
+*.min.css
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+
+# Temporary Files
+*.tmp
+*.temp
+
+# Backup Files
+*.bak
+*.backup
+
+# Cache Files
+.cache/
+.parcel-cache/
+
+# Local Development
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Images (uncomment if you want to ignore large image files)
+# *.jpg
+# *.jpeg
+# *.png
+# *.gif
+# *.bmp
+# *.svg
+
+# Documents
+*.pdf
+*.doc
+*.docx
+
+# Compressed Files
+*.zip
+*.rar
+*.7z
+*.tar.gz
